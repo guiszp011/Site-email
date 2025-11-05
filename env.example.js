@@ -1,0 +1,6 @@
+windows.env= {
+   EMAIL_SERVICE_ID: "",
+   EMAIL_TEMPLATE_ID_ADMIN:"",
+   EMAIL_TEMPLATE_ID_REPLY:"",
+   EMAIL_PUBLIC_KEY:"",
+   }
