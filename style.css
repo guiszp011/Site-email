@@ -1,0 +1,272 @@
+/*
+=============================================================================
+O CSS (cascading syle sheets é uma linguagem de estilos usada para defifir o estilo visual do HTML.
+Ele trabalha com três partes principais::after
+-SELETOR: o que será estilizado (ex: body, h1, .classe, #id
+-Propriedade: o que será alterado (ex: color, (font-size)
+-VALOR: o novo estilo (ex: red, 20px)
+=============================================================================
+*/
+/*
+O selector body representa o corpo da página.
+As propriedades definem a aparencia geral do site
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
+
+/* 
+O seletor universal (*) aplicar o estilo a TODOS os elementos da páginas;
+Aqui usamos para remover as margens.
+ */
+
+ *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+
+
+body{
+
+    /*tipo de fonte do site*/
+     font-family: "Bitcount Grid Single", system-ui;
+     /*Cor de fundo do site*/
+     background-color: #0a192f;;
+     color: #e2e8f0;
+     /* altura das linhas */
+     line-height: 1.6;
+    /* Personalizar seleção do texto */
+    
+}
+
+::selection{
+        background-color: #00e5ff;
+        color: #000
+    }
+
+/*
+=============================================================================
+TITULOS
+=============================================================================
+/*
+seletores de tags (h1, h2, h3,)estilizaram os titulos
+*/
+h1 {
+    /* Espaçamento inferior */
+    margin-bottom: 10px;
+    /*altura da linha */
+    line-height: 1.25;
+    /*tamanho da fonte */
+    font-size: 2.4rem;
+    /*cor da fonte */
+    color: #00e5ff;
+    /*brilho da sombra */
+    text-shadow: 0 0 10px #00e5ff
+}
+h2 {
+margin-bottom: 10px;
+line-height: 1.25;
+font-size: 1.8rem;
+color:#8b5cf6;
+}
+
+P {
+    margin-bottom: 14px;
+    color: #94a3b8;
+}
+a {
+    color:#00e5ff;
+    /*decoração do meu texto --> o nome tira o sublinhado dos links */
+        text-decoration: none;
+    /*criar uma transição ao passar o mouse*/
+    transition: color 0.2s;
+}
+
+/*O estado :hover é acionado quando o usúario passa o mouse */
+a:hover {
+    color:#00e5ff;
+}
+
+/*
+=============================================================================
+CABEÇALHO E MENU DA NAVEGAÇÃO
+=============================================================================
+*/
+header {
+    /* o linear-gradient cria um efeito degradê, passamos o angulo
+    e depois as cores com a porcetagem que elas vão ocupar*/
+
+    background: linear-gradient(90deg, #111827 0%, #1e1b4b 100%);
+
+/* o espaçamento dentro do header */
+padding: 40px 20px;
+/*alinhamento do texto */
+text-align: center;
+/* cria uma sombra */
+box-shadow: 0 4px 20px rgba(253, 199, 199, 0.4);
+}
+
+nav {
+    background-color: #0f172a;
+    /* bordar superior --> 1ipx (espessura), solid (o tipo de borda), cor*/
+    border-top: ipx solid #1e293b;
+    /* bordar inferior --> 1ipx (espessura), solid (o tipo de borda), cor*/
+    border-bottom: 1px solid #1e293b;
+    /* Alterando a lista que está dentro do nav */
+}    
+    nav ul {
+        /* Vai deixa os links lado a lado*/
+        display: flex;
+        justify-content: space-around;
+        /*remover os pontinhos da lista */
+        list-style: none;
+        padding: 10px 0; 
+}
+    nav a {
+        color: #e2e8f0;
+        padding: 6px 14px;
+        /*Para deixar as bordas (os cantos) arredondadas */
+        border-radius: 50px;
+    }
+    nav a:hover{
+        background-color: #00e5ff;
+        color:#000;
+
+    }
+    /* 
+    ================================================================================================================
+    ESTRUTURA PRINCIPAL E SEÇÕES
+    ================================================================================================================
+    */
+    main {
+    /* Definido a largura a máxima do conteudo */
+    max-width: 670px;
+    margin: 60px auto;
+    padding: 0 10px;
+    }
+/* Cada <section> funciona como um card visual
+ */
+ main > section {
+    background-color: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    box-shadow: 0 0 20px (rgba(0,229,255,0.08));
+    padding: 24px;
+    margin-bottom: 24px;
+ }
+
+ /*
+    ==============================================================================================
+    IMAGENS
+    ==============================================================================================
+    */
+    img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid #1e293b;
+        border: 1px solid #1e293b;
+        margin-bottom: 14px;
+    }
+
+    /*
+    ==============================================================================================
+    Formulários
+    ==============================================================================================
+    */
+
+    form {
+        display: grid;
+        gap: 12px;
+    }
+
+/*
+=========================================================================================================================
+Formulários
+=========================================================================================================================
+*/
+form {
+    display:grid;
+    gap: 12px
+}
+
+label {
+    /* deixar o label em negrito */
+    font-weight: bold;
+    margin-bottom: #00e5ff;
+}
+input, textarea {
+    width: 50%;
+    padding: 10px, 12px;
+    border: 1.5px solid #1e293b;
+    border-radius: 10px;
+    color: #e2e8f0;
+}
+input:focus, textarea:focus {
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px rgba(1, 225, 250, 0.4);
+    outline: none;
+    
+}
+button {
+    background-color: linear-gradient(90deg, #8b5cf6 0%, #00e5ff);
+    color:#fff;
+    border:none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    /* Curso do mouse */
+    cursor: pointer;
+    box-shadow: 0 0 12px rgb(0, 229, 255);
+}
+
+/* 
+=========================================================================================================================
+TABELA
+=========================================================================================================================
+ */
+ table {
+    width: 100%;
+    border: 1px solid #1e293b;
+   border-radius: 10px;
+   background-color: #0f172a;
+   /* border collpase une as bordas da tabela */
+   border-collapse: collapse;
+ }
+caption {
+    color: #00e5ff;
+    text-shadow: 0 0 6px #00e5ff;
+    font-weight: bold;
+    padding: 14px;
+    font-size: 1.4rem;
+}
+thead th{
+    background-color: #1e1b4b;
+    color: #e2e8f0;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid #1e293b;
+}
+tbody td {
+    padding: 10px 14px;
+    color: #e2e8f9;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* 
+=========================================================================================================================
+RÓDAPE
+=========================================================================================================================
+ */
+ footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
+ }
+ #resposta{
+color: #8761f7;
+text-shadow: 0 0 10px #8761f7
+ }
